@@ -28,7 +28,7 @@ namespace GroupManagementProject.Pages.Groups
             User userFound = context.Users.SingleOrDefault(u => u.Username == username && u.Status == true);
             Group group = context.Groups.SingleOrDefault(g => g.GroupId == int.Parse(groupid));
             List<Role> roles = context.Roles.ToList();
-            Member member = context.Members.SingleOrDefault(m => m.GroupId == int.Parse(groupid) && m.User.Username.Equals(username) && m.State == 1 && m.Status == true);
+            Member member = context.Members.SingleOrDefault(m => m.GroupId == int.Parse(groupid) && m.User.Username.Equals(username) && m.State == 0 && m.Status == true);
 
             ViewData["curUser"] = curUser;
             ViewData["group"] = group;

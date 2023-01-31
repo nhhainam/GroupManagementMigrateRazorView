@@ -144,7 +144,7 @@
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">View Member</h6>
-                                    @if (usermember.RoleId == 1){
+                                    @if (null != usermember && usermember.RoleId == 1){
                                         <a class="btn btn-info" style="text-decoration: none" asp-page="/Groups/InviteMember" asp-route-groupid="@gr.GroupId">Invite member</a>
                                     }
                                 </div>
